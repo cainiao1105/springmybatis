@@ -1,3 +1,4 @@
+<%@page import="com.sun.xml.internal.txw2.Document"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -6,7 +7,35 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
 </head>
+<%
+String msg = "";
+if(session.getAttribute("msg")!=null){
+	msg = session.getAttribute("msg").toString();
+}
+  
+%>
+<script type="text/javascript">
+
+	
+
+</script>
 <body>
-dfsdf
+
+<form action="login/login.do">
+	<table>
+	<div id="msg" > <%=msg %> </div>
+	<tr>
+	<th>用户名：</th>
+	<td><input type="text" name="username" > </td>
+	</tr>
+	<tr>
+	<th>密码：</th>
+	<td><input type="password" name="password" > </td>
+	</tr>
+	<tr><td align="center"><input type="submit" value="登录"> </td></tr>
+	</table>
+
+</form>
+
 </body>
 </html>

@@ -21,9 +21,12 @@ public class UserTest {
      
     @Test
     public void addUser(){
-        User user = new User();
-        user.setNickname("你好");
-        user.setState(2);
-        System.out.println(userService.insertUser(user));
+    	for (int i = 0;i<50;i++){
+    		 User user = new User();
+    	        user.setNickname("你好" + i);
+    	        user.setState(i);
+    	       userService.insertUser(user);
+    	}
+       
     }
 }
