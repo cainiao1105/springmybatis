@@ -14,13 +14,11 @@ import javax.servlet.http.HttpSession;
 
 public class LoginFilter implements Filter{
 
-	@Override
 	public void destroy() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain filterChain) throws IOException, ServletException {
 		HttpServletRequest httpRequest = (HttpServletRequest)request;
@@ -30,7 +28,7 @@ public class LoginFilter implements Filter{
 		if(!requestURI.equals("login.jsp")){
 			HttpSession session = httpRequest.getSession();
 			if(session.getAttribute("username")==null){
-				session.setAttribute("msg", "您还没有登录");
+				session.setAttribute("msg", "鎮ㄨ繕娌℃湁鐧诲綍");
 				httpResponse.sendRedirect(httpRequest.getContextPath()+"/login.jsp");
 				return;
 			}
@@ -39,7 +37,6 @@ public class LoginFilter implements Filter{
 		filterChain.doFilter(request, response);
 	}
 
-	@Override
 	public void init(FilterConfig arg0) throws ServletException {
 		// TODO Auto-generated method stub
 		

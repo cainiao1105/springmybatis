@@ -9,7 +9,27 @@
 
 	<!-- 引入jdbc配置文件 -->
 	<context:property-placeholder location="classpath:conf/jdbc.properties" />
+	<!-- <context:property-placeholder location="classpath:conf/redis.properties" /> -->
 
 	<!-- 扫描文件（自动将servicec层注入） -->
 	<context:component-scan base-package="cn.springmvc.service" />
+	
+	 <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">  
+        <property name="maxTotal" value="${spring.redis.pool.max-total}"></property>  
+        <property name="maxIdle" value="${spring.redis.pool.max-idle}" />   
+        <property name="maxWaitMillis" value="${spring.redis.pool.max-wait}" />  
+        <property name="testOnBorrow" value="${spring.redis.pool.test_on_borrow}" />  
+    </bean>  
+      
+      
+    <bean id="connectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+    <property name="hostName" value="${spring.redis.host}"></property>
+    <property name="password" value="${spring.redis.password}"></property>
+    <property name="port" value="${spring.redis.port}"></property>
+    <property name="poolConfig" ref="poolConfig"></property>
+  	</bean>
+      
+    <bean id="redisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate">  
+        <property name="connectionFactory"   ref="connectionFactory" />  
+    </bean>         
 </beans>

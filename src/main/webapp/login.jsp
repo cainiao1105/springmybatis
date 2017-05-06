@@ -7,23 +7,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
 </head>
-<%
-String msg = "";
-if(session.getAttribute("msg")!=null){
-	msg = session.getAttribute("msg").toString();
-}
-  
-%>
 <script type="text/javascript">
-
-	
-
 </script>
 <body>
-
 <form action="login/login.do">
 	<table>
-	<div id="msg" > <%=msg %> </div>
 	<tr>
 	<th>用户名：</th>
 	<td><input type="text" name="username" > </td>

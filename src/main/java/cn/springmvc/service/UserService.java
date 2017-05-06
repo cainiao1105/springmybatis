@@ -4,4 +4,5 @@ import cn.springmvc.model.User;
 
 public interface UserService {
 	public int insertUser(User user);
+	public void cleanRedis(String key);
 }

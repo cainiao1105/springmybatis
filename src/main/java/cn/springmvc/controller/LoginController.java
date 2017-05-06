@@ -17,14 +17,10 @@ public class LoginController {
 	public String login(HttpServletRequest request){
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		HttpSession session = request.getSession(false);
-		if((username!=null&&password!=null)||session!=null){
+		if((username!=null&&password!=null)){
 			if(username.equals("czb")&&password.equals("123456")){
-				session.setAttribute("username", username);
 				return "user";
 			}else{
-				session =  request.getSession();
-				session.setAttribute("msg", "用户名或密码不正确，清重新输入！");
 				return "redirect:/login.jsp";
 			}
 		}

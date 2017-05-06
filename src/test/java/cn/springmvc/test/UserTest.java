@@ -21,12 +21,12 @@ public class UserTest {
      
     @Test
     public void addUser(){
-    	for (int i = 0;i<50;i++){
+    	/*for (int i = 0;i<50;i++){
     		 User user = new User();
     	        user.setNickname("你好" + i);
     	        user.setState(i);
     	       userService.insertUser(user);
-    	}
-       
+    	}*/
+    	 userService.cleanRedis("key");
     }
 }
