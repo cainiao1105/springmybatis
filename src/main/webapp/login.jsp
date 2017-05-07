@@ -10,7 +10,7 @@
 <script type="text/javascript">
 </script>
 <body>
-<form action="login/login.do">
+<form action="login.do">
 	<table>
 	<tr>
 	<th>用户名：</th>

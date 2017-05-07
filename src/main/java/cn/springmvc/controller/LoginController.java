@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/login")
+@RequestMapping("/")
 public class LoginController {
 	@RequestMapping("/tologin")
 	public String toLogin(){
@@ -19,7 +19,7 @@ public class LoginController {
 		String password = request.getParameter("password");
 		if((username!=null&&password!=null)){
 			if(username.equals("czb")&&password.equals("123456")){
-				return "user";
+				return "import";
 			}else{
 				return "redirect:/login.jsp";
 			}
