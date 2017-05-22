@@ -18,7 +18,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/excel")
 public class UserComtroller {
 	Logger logger =  Logger.getLogger(UserComtroller.class);
 	@RequestMapping("importExcel")

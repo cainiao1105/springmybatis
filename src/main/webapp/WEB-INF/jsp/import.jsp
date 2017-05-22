@@ -8,8 +8,8 @@
 </head>
 <body>
 <h1>欢迎你！！！</h1>
-<form action="importExcel.do" method="post" enctype="multipart/form-data" target="resultShow">
-<input type="text" name="username" value="zhangsan">
+<form action="${pageContext.request.contextPath}/excel/importExcel.do" method="post" enctype="multipart/form-data" target="resultShow">
+<input type="text" name="username" value="${user.id}">
 <input type="file" name="file" /> <input type="submit" value="提交" />
 </form>
 

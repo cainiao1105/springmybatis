@@ -10,7 +10,7 @@
 <script type="text/javascript">
 </script>
 <body>
-<form action="login.do">
+<form action="${pageContext.request.contextPath}/login/login.do" method="post">
 	<table>
 	<tr>
 	<th>用户名：</th>
