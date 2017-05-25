@@ -19,8 +19,8 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 @Controller
 @RequestMapping("/excel")
-public class UserComtroller {
-	Logger logger =  Logger.getLogger(UserComtroller.class);
+public class UserController {
+	Logger logger =  Logger.getLogger(UserController.class);
 	@RequestMapping("importExcel")
     public void importExcel(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		 MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;    
