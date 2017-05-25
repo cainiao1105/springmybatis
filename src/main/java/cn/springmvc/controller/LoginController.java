@@ -27,7 +27,7 @@ public class LoginController {
 		if((username!=null&&password!=null)){
 			model.addAttribute(user);
 			if(username.equals("czb")&&password.equals("123456")){
-				return "import";
+				return "user/userMgr";
 			}else{
 				return "redirect:/login.jsp";
 			}

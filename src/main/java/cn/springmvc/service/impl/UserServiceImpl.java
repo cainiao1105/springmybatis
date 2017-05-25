@@ -1,6 +1,7 @@
 package cn.springmvc.service.impl;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,5 +39,10 @@ public class UserServiceImpl implements UserService {
 //		System.out.println("开始删除key=" + key);
 //		redisTemplate.delete(key);
 //		System.out.println("删除完成");
+	}
+
+	@Override
+	public List<User> queryUserList() {
+		return userDAO.queryUserList();
 	}
 }

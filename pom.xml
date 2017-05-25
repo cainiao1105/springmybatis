@@ -181,6 +181,30 @@
     	<version>2.4</version>
 	</dependency>
 		
+		<!-- jstl20170525 -->
+	<dependency>
+    	<groupId>jstl</groupId>
+    	<artifactId>jstl</artifactId>
+    	<version>1.2</version>
+	</dependency>
+		<!-- pageHelper20170525 -->
+	<dependency>
+    	<groupId>com.github.pagehelper</groupId>
+    	<artifactId>pagehelper</artifactId>
+    	<version>3.7.3</version>
+	</dependency>
+	
+	<!-- springmvc 3.x Jackson Json处理工具包 -->    
+   <dependency>    
+      <groupId>org.codehaus.jackson</groupId>    
+      <artifactId>jackson-core-asl</artifactId>    
+      <version>1.9.13</version>    
+  </dependency>    
+  <dependency>    
+      <groupId>org.codehaus.jackson</groupId>    
+      <artifactId>jackson-mapper-asl</artifactId>    
+      <version>1.9.13</version>    
+  </dependency>  
     </dependencies>
     <build>
         <finalName>springmvc</finalName>

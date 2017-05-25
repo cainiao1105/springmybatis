@@ -1,5 +1,7 @@
 package cn.springmvc.dao;
 
+import java.util.List;
+
 import cn.springmvc.model.User;
 
 public interface UserDAO {
@@ -9,4 +11,6 @@ public interface UserDAO {
     * @return
     */
    public int insertUser(User user);
+   
+   public List<User> queryUserList();
 }
