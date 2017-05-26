@@ -194,7 +194,7 @@
     	<version>3.7.3</version>
 	</dependency>
 	
-	<!-- springmvc 3.x Jackson Json处理工具包 -->    
+	<!-- springmvc 3.x Jackson Json处理工具包 20170526-->    
    <dependency>    
       <groupId>org.codehaus.jackson</groupId>    
       <artifactId>jackson-core-asl</artifactId>    
