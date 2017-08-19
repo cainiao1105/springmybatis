@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -27,6 +28,10 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	@RequestMapping(value = "initUserMgr", method = RequestMethod.POST)
+	public String initUserMgr(){
+		return "user/userMgr";
+	}
 	@RequestMapping("queryUserList")
 	@ResponseBody
 	public GridData<User> getUserList(PageInfoModel pageModel,HttpServletRequest request,HttpServletResponse response,Model model){

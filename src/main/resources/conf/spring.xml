@@ -14,7 +14,7 @@
 	<!-- 扫描文件（自动将servicec层注入） -->
 	<context:component-scan base-package="cn.springmvc.service" />
 	
-	 <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">  
+	 <!-- <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">  
         <property name="maxTotal" value="${spring.redis.pool.max-total}"></property>  
         <property name="maxIdle" value="${spring.redis.pool.max-idle}" />   
         <property name="maxWaitMillis" value="${spring.redis.pool.max-wait}" />  
@@ -31,5 +31,5 @@
       
     <bean id="redisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate">  
         <property name="connectionFactory"   ref="connectionFactory" />  
-    </bean>         
+    </bean>          -->
 </beans>
